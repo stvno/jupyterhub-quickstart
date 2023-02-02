@@ -34,7 +34,7 @@ For more detailed instructions on creating the minimal notebook image, including
 To load the JupyterHub image, next run:
 
 ```
-oc apply -f https://raw.githubusercontent.com/jupyter-on-openshift/jupyterhub-quickstart/master/image-streams/jupyterhub.json
+oc apply -f https://raw.githubusercontent.com/stvno/jupyterhub-quickstart/develop/image-streams/jupyterhub.json
 ```
 
 An image stream named ``jupyterhub`` should be created in your project, with a tag corresponding to whatever is the latest version. This image is also based on CentOS.
@@ -42,7 +42,7 @@ An image stream named ``jupyterhub`` should be created in your project, with a t
 If you are using OpenShift Container Platform, and need to instead build a RHEL based version of the JupyterHub image, you can use the command:
 
 ```
-oc apply -f https://raw.githubusercontent.com/jupyter-on-openshift/jupyterhub-quickstart/master/build-configs/jupyterhub.json
+oc apply -f https://raw.githubusercontent.com/stvno/jupyterhub-quickstart/develop/build-configs/jupyterhub.json
 ```
 
 Use one or the other method. Do not load the image stream and try and create a build config to create it, at the same time.
@@ -53,10 +53,10 @@ Loading the JupyterHub Templates
 To make it easier to deploy JupyterHub in OpenShift, templates are provided. To load the templates run:
 
 ```
-oc apply -f https://raw.githubusercontent.com/jupyter-on-openshift/jupyterhub-quickstart/master/templates/jupyterhub-builder.json
-oc apply -f https://raw.githubusercontent.com/jupyter-on-openshift/jupyterhub-quickstart/master/templates/jupyterhub-deployer.json
-oc apply -f https://raw.githubusercontent.com/jupyter-on-openshift/jupyterhub-quickstart/master/templates/jupyterhub-quickstart.json
-oc apply -f https://raw.githubusercontent.com/jupyter-on-openshift/jupyterhub-quickstart/master/templates/jupyterhub-workspace.json
+oc apply -f https://raw.githubusercontent.com/stvno/jupyterhub-quickstart/develop/templates/jupyterhub-builder.json
+oc apply -f https://raw.githubusercontent.com/stvno/jupyterhub-quickstart/develop/templates/jupyterhub-deployer.json
+oc apply -f https://raw.githubusercontent.com/stvno/jupyterhub-quickstart/develop/templates/jupyterhub-quickstart.json
+oc apply -f https://raw.githubusercontent.com/stvno/jupyterhub-quickstart/develop/templates/jupyterhub-workspace.json
 ```
 
 This should result in the creation of the templates ``jupyterhub-builder``, ``jupyterhub-deployer``, ``jupyterhub-quickstart`` and ``jupyterhub-workspace``.
